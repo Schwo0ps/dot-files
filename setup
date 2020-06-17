@@ -1,0 +1,40 @@
+#!/bin/bash
+
+DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/content"
+
+# Set up symlink.
+# First arg is desired location.
+# Second arg is file to link to.
+function helper
+{
+  loc="$1"
+  file="$DIR/$2"
+  echo "Processing - $loc"
+
+  if [[ -f "$loc" ]]; then
+    diff="$(diff "$loc" "$file")"
+    if [[ $diff ]] ; then
+      echo "Diff between files: "
+      echo "$diff"
+      read -p "Replace contents? [y/N]: " var
+      if [[ ${var,,} == 'y' ]]; then
+        rm "$loc"
+        ln -s "$file" "$loc"
+      else
+        echo "Skipping..."
+      fi
+    else
+      rm "$loc"
+      ln -s "$file" "$loc"
+    fi
+  else
+    rm -f "$loc"
+    ln -s "$file" "$loc"
+  fi
+}
+
+helper ~/.bash_aliases bash_aliases
+helper ~/bin/cctg cctg
+helper ~/.gitconfig gitconfig
+helper ~/.gitignore global-gitignore
+helper ~/.config/nvim/init.vim init.vim
