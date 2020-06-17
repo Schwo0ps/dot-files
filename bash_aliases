@@ -1,0 +1,18 @@
+alias vi='nvim'
+alias vim='nvim'
+export EDITOR='nvim'
+
+alias gis='git status'
+alias gd='git diff'
+
+export ROS_WS_PATH=${HOME}/workspace
+export MISO_CONFIG_PATH=${HOME}/.miso
+
+alias git-clean-branches='git remote prune origin && git branch --merged | grep -v \* | xargs git branch -D'
+
+function sk() {
+  eval $(ssh-agent)
+  ssh-add
+}
+
+alias gk='git fetch --all && tig --all'
