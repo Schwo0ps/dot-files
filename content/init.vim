@@ -16,6 +16,7 @@ nnoremap <leader>d :NERDTreeClose<CR>
 nnoremap <leader>l Jxi<CR><Esc>
 inoremap jw <Esc>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+nnoremap <Leader>e :e#<CR>
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -33,7 +34,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Ctags
 Plug 'skywind3000/asyncrun.vim'
-autocmd BufWritePost *.py,*.cpp,*.h,*.hxx,*.c,*.cxx AsyncRun cctg
+" autocmd BufWritePost *.py,*.cpp,*.h,*.hxx,*.c,*.cxx AsyncRun cctg
 
 " Set up NERDTree.
 Plug 'preservim/nerdtree'
@@ -43,8 +44,13 @@ autocmd vimenter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+Plug 'airblade/vim-gitgutter'
+
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
+
+Plug 'rhysd/vim-clang-format'
+autocmd FileType c,cpp,objc ClangFormatAutoEnable
 
 " Autocomplete
 Plug 'ncm2/ncm2'
