@@ -32,6 +32,13 @@ autocmd BufWritePre *.py call flake8#Flake8()
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+" Prettier for web code
+" Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+autocmd FileType javascript,javascriptreact nnoremap <leader>p :silent %!npx -q prettier --stdin-filepath %<CR>
+" autocmd BufWritePre FileType javascript,javascriptreact !npx -q prettier --stdin-filepath %<CR>
+" Plug 'sbdchd/neoformat'
+" autocmd BufWritePre *.js,*.jsx,*.css,*.html Neoformat
+
 " Ctags
 Plug 'skywind3000/asyncrun.vim'
 " autocmd BufWritePost *.py,*.cpp,*.h,*.hxx,*.c,*.cxx AsyncRun cctg
