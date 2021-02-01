@@ -38,3 +38,4 @@ helper ~/bin/cctg cctg
 helper ~/.gitconfig gitconfig
 helper ~/.gitignore global-gitignore
 helper ~/.config/nvim/init.vim init.vim
+helper ~/.ssh/config config

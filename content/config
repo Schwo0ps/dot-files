@@ -1,0 +1,36 @@
+# Roar
+Host dev
+    HostName compute.fryer1.dev.internal.misorobotics.com
+    User flippy
+    ForwardAgent yes
+Host wc
+    HostName compute.fryer1.chicago.wcastle.internal.misorobotics.com
+    User flippy
+    ForwardAgent yes
+
+# Cart 4
+Host ft-myers
+    HostName compute.fryer1.ft-myers.cali.internal.misorobotics.com
+    User flippy
+    ForwardAgent yes
+    Port 2222
+
+# Cook Right
+Host green-cr
+    HostName 10.191.0.47
+    User jetson
+Host tampa-outback
+    HostName 10.191.1.225
+    User miso
+
+Host nikita-desktop
+	HostName 10.191.0.20
+	User nikita
+Host noc-desktop
+	HostName 10.191.0.17
+#  HostName 100.96.1.2
+	User nikita
+Host festo
+  HostName 10.191.0.17
+  User nikita
+  ForwardAgent yes
