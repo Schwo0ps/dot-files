@@ -3,3 +3,5 @@
 [user]
         email = nkosolobov2@gmail.com
         name = Nikita Kosolobov
+[pull]
+	ff = only

@@ -53,6 +53,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 Plug 'airblade/vim-gitgutter'
 
+Plug 'hashivim/vim-terraform'
+let g:terraform_fmt_on_save=1
+
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 

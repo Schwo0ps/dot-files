@@ -15,6 +15,10 @@ Host ft-myers
     ForwardAgent yes
     Port 2222
 
+# PVE
+Host pve-video
+    HostName 10.191.4.26
+
 # Cook Right
 Host green-cr
     HostName 10.191.0.47
@@ -23,12 +27,12 @@ Host tampa-outback
     HostName 10.191.1.225
     User miso
 
+# Other
 Host nikita-desktop
 	HostName 10.191.0.20
 	User nikita
 Host noc-desktop
 	HostName 10.191.0.17
-#  HostName 100.96.1.2
 	User nikita
 Host festo
   HostName 10.191.0.17
