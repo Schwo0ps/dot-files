@@ -14,9 +14,9 @@ set grepprg=ack
 nnoremap <leader>f :NERDTreeFocus<CR>
 nnoremap <leader>d :NERDTreeClose<CR>
 nnoremap <leader>l Jxi<CR><Esc>
-inoremap jw <Esc>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 nnoremap <Leader>e :e#<CR>
+nnoremap <Leader>p :call flake8#Flake8()
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -63,17 +63,29 @@ Plug 'rhysd/vim-clang-format'
 autocmd FileType c,cpp,objc ClangFormatAutoEnable
 
 " Autocomplete
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-pyclang'
-Plug 'ncm2/ncm2-cssomni'
-Plug 'ncm2/ncm2-tern'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-html-subscope'
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"autocmd BufEnter * call ncm2#enable_for_buffer()
+"set completeopt=noinsert,menuone,noselect
+"Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-path'
+"Plug 'ncm2/ncm2-pyclang'
+"Plug 'ncm2/ncm2-cssomni'
+"Plug 'ncm2/ncm2-tern'
+"Plug 'ncm2/ncm2-jedi'
+"Plug 'ncm2/ncm2-html-subscope'
+
+" Autocomplete (take 2)
+"Python >= 3.6.1
+"pip3 install --user pynvim
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 
 " List ends here. Plugins become visible to Vim after this call.
