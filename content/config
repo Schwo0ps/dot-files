@@ -1,10 +1,12 @@
 # Roar
 Host dev
-    HostName compute.fryer1.dev.internal.misorobotics.com
+#    HostName compute.fryer1.dev.internal.misorobotics.com
+    HostName 10.191.10.2
     User flippy
     ForwardAgent yes
 Host wc
-    HostName compute.fryer1.chicago.wcastle.internal.misorobotics.com
+#    HostName compute.fryer1.chicago.wcastle.internal.misorobotics.com
+    HostName 10.128.15.40
     User flippy
     ForwardAgent yes
 Host roar-k1
