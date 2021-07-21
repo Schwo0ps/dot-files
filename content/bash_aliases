@@ -4,9 +4,11 @@ export EDITOR='nvim'
 
 alias gis='git status'
 alias gd='git diff'
+alias gb='git rebase -i --autosquash origin/develop'
 
 export ROS_WS_PATH=${HOME}/workspace
 export MISO_CONFIG_PATH=${HOME}/.miso
+export ML_MODEL_PATH=${ROS_WS_PATH}/src/ml_weights/classifiers/white_castle/white_castle_pilot.h5
 
 alias w="cd ${ROS_WS_PATH}/src"
 

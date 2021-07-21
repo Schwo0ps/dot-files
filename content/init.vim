@@ -50,6 +50,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 autocmd vimenter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 Plug 'airblade/vim-gitgutter'
 

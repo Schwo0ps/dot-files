@@ -2,6 +2,7 @@
 Host dev
 #    HostName compute.fryer1.dev.internal.misorobotics.com
     HostName 10.191.10.2
+#    HostName 10.128.2.2
     User flippy
     ForwardAgent yes
 Host wc
@@ -14,10 +15,14 @@ Host roar-k1
     User flippy
     ForwardAgent yes
     Port 2222
+
+# Other
 Host fresh
     HostName 10.191.129.30
     User misofresh
     Port 2343
+Host jordan-desktop
+    HostName 10.191.0.245
 
 # Cart 4
 Host ft-myers
@@ -45,11 +50,13 @@ Host brentwood-cr
 Host nikita-desktop
 #	HostName 10.191.0.20
   HostName 100.96.1.18
-	User nikita
 Host noc-desktop
 	HostName 10.191.0.17
-	User nikita
 Host festo
   HostName 10.191.0.17
-  User nikita
+  ForwardAgent yes
+
+# Proxmox
+Host video
+  HostName 10.191.4.26
   ForwardAgent yes
