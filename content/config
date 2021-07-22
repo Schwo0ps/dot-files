@@ -16,6 +16,11 @@ Host roar-k1
     ForwardAgent yes
     Port 2222
 
+Host setup1
+    HostName 10.191.0.121
+    User flippy
+    ForwardAgent yes
+
 # Other
 Host fresh
     HostName 10.191.129.30
