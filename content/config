@@ -10,11 +10,10 @@ Host wc
     HostName 10.128.15.40
     User flippy
     ForwardAgent yes
-Host roar-k1
-    HostName 10.191.0.179
+Host inspire
+    HostName 10.128.14.40
     User flippy
     ForwardAgent yes
-    Port 2222
 
 Host setup1
     HostName 10.191.0.121
@@ -36,9 +35,21 @@ Host ft-myers
     ForwardAgent yes
     Port 2222
 
+# DMZ
+Host beast
+    HostName 4.71.137.34
+    ForwardAgent yes
+    Port 2345
+Host cookright
+    HostName 4.71.137.34
+    ForwardAgent yes
+    Port 2344
+
 # PVE
 Host pve-video
     HostName 10.191.4.26
+Host vpn
+    HostName 10.191.4.18
 
 # Cook Right
 Host green-cr
@@ -53,8 +64,8 @@ Host brentwood-cr
 
 # Other
 Host nikita-desktop
-#	HostName 10.191.0.20
-  HostName 100.96.1.18
+  HostName 10.191.0.196
+	User nikita
 Host noc-desktop
 	HostName 10.191.0.17
 Host festo
@@ -64,4 +75,8 @@ Host festo
 # Proxmox
 Host video
   HostName 10.191.4.26
+  ForwardAgent yes
+Host jordan-desktop
+  HostName 100.96.1.26
+  User nikita
   ForwardAgent yes
