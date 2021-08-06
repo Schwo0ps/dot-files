@@ -79,14 +79,16 @@ autocmd FileType c,cpp,objc ClangFormatAutoEnable
 " Autocomplete (take 2)
 "Python >= 3.6.1
 "pip3 install --user pynvim
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+"if has('nvim')
+"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"  Plug 'Shougo/deoplete.nvim'
+"  Plug 'roxma/nvim-yarp'
+"  Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+"let g:deoplete#enable_at_startup = 1
+
+let g:kite_supported_languages = ['python', 'javascript']
 
 
 " List ends here. Plugins become visible to Vim after this call.

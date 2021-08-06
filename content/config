@@ -3,6 +3,11 @@ Host dev
 #    HostName compute.fryer1.dev.internal.misorobotics.com
     HostName 10.191.10.2
 #    HostName 10.128.2.2
+#    HostName 10.191.10.53
+    User flippy
+    ForwardAgent yes
+Host new-dev
+    HostName 10.191.10.47
     User flippy
     ForwardAgent yes
 Host wc
@@ -10,14 +15,19 @@ Host wc
     HostName 10.128.15.40
     User flippy
     ForwardAgent yes
-Host inspire
+Host inspire-alanta
     HostName 10.128.14.40
     User flippy
     ForwardAgent yes
-
-Host setup1
-    HostName 10.191.0.121
+Host roar-k1
+    HostName 10.191.0.179
     User flippy
+    ForwardAgent yes
+
+# Infra
+Host infra-cookright
+    HostName 10.191.9.10
+    User miso
     ForwardAgent yes
 
 # Other
