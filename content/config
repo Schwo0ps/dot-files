@@ -54,6 +54,7 @@ Host cookright
     HostName 4.71.137.34
     ForwardAgent yes
     Port 2344
+    LocalForward 3001 127.0.0.1:3000
 
 # PVE
 Host pve-video
