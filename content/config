@@ -1,13 +1,11 @@
 # Roar
-Host dev
+Host dev-backshelf
 #    HostName compute.fryer1.dev.internal.misorobotics.com
-    HostName 10.191.10.2
-#    HostName 10.128.2.2
-#    HostName 10.191.10.53
+    HostName 10.191.10.53
     User flippy
     ForwardAgent yes
-Host new-dev
-    HostName 10.191.10.47
+Host dev-canopy
+    HostName 10.128.153.40
     User flippy
     ForwardAgent yes
 Host wc
