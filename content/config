@@ -14,7 +14,7 @@ Host wc
     HostName 10.128.86.40
     User flippy
     ForwardAgent yes
-Host inspire-alanta
+Host inspire-atlanta
     HostName 10.128.14.40
     User flippy
     ForwardAgent yes
