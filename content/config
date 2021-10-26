@@ -26,6 +26,10 @@ Host wc-new
     HostName 10.128.86.40
     User flippy
     ForwardAgent yes
+Host caliburger-shoreline
+    HostName 10.128.54.40
+    User flippy
+    ForwardAgent yes
 
 # Infra
 Host infra-cookright
@@ -64,6 +68,8 @@ Host pve-video
     HostName 10.191.4.26
 Host vpn
     HostName 10.191.4.18
+
+# GCP
 Host replication
     HostName 10.0.64.34
     ForwardAgent yes
