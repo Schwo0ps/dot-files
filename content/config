@@ -60,7 +60,7 @@ Host beast
 Host cookright
     HostName 4.71.137.34
     ForwardAgent yes
-    Port 2344
+    Port 2347
     LocalForward 3001 127.0.0.1:3000
 
 # PVE
@@ -89,6 +89,7 @@ Host brentwood-cr
 Host nikita-desktop
   HostName 10.191.0.196
 	User nikita
+  ForwardAgent yes
 Host noc-desktop
 	HostName 10.191.0.17
 Host festo

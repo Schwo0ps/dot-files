@@ -7,6 +7,7 @@ alias gd='git diff'
 alias gb='git rebase -i --autosquash origin/develop'
 alias gf='git commit -a --fixup=HEAD'
 alias gp='git push -u origin HEAD'
+alias gfp='gf && gp'
 
 export ROS_WS_PATH=${HOME}/workspace
 export MISO_CONFIG_PATH=${HOME}/.miso
