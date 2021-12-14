@@ -9,11 +9,8 @@ alias gf='git commit -a --fixup=HEAD'
 alias gp='git push -u origin HEAD'
 alias gfp='gf && gp'
 
-export ROS_WS_PATH=${HOME}/workspace
-export MISO_CONFIG_PATH=${HOME}/.miso
-export ML_MODEL_PATH=${ROS_WS_PATH}/src/ml_weights/classifiers/white_castle/white_castle_pilot.h5
-
 alias w="cd ${ROS_WS_PATH}/src"
+alias gk='git fetch --all && tig --all'
 
 alias git-clean-branches='git remote prune origin && git branch --merged | grep -v \* | xargs git branch -D'
 
@@ -22,7 +19,6 @@ function sk() {
   ssh-add
 }
 
-alias gk='git fetch --all && tig --all'
 export ROS_WS_PATH="${HOME}/workspace"
 export MISO_CONFIG_PATH="${HOME}/.miso"
 export ML_MODEL_PATH="${ROS_WS_PATH}/src/ml_weights/classifiers/white_castle/white_castle_pilot.h5"
