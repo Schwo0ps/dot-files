@@ -73,6 +73,7 @@ Host vpn
 Host replication
     HostName 10.0.64.34
     ForwardAgent yes
+    IdentityFile ~/.ssh/google_compute_engine
 
 # Cook Right
 Host green-cr
