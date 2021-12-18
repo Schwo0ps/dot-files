@@ -30,6 +30,10 @@ Host caliburger-shoreline
     HostName 10.128.54.40
     User flippy
     ForwardAgent yes
+Host caliburger-westlake
+    HostName 10.128.55.226
+    User flippy
+    ForwardAgent yes
 
 # Infra
 Host infra-cookright
