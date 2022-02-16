@@ -10,7 +10,6 @@ Host dev-canopy
     ForwardAgent yes
 Host wc
 #    HostName compute.fryer1.chicago.wcastle.internal.misorobotics.com
-#    HostName 10.128.15.40
     HostName 10.128.86.40
     User flippy
     ForwardAgent yes
@@ -22,16 +21,18 @@ Host roar-k1
     HostName 10.191.0.179
     User flippy
     ForwardAgent yes
-Host wc-new
-    HostName 10.128.86.40
-    User flippy
-    ForwardAgent yes
 Host caliburger-shoreline
     HostName 10.128.54.40
     User flippy
     ForwardAgent yes
 Host caliburger-westlake
     HostName 10.128.55.226
+    User flippy
+    ForwardAgent yes
+
+# Fortinet
+Host buffalo-wild-rings
+    HostName 10.129.0.34
     User flippy
     ForwardAgent yes
 
