@@ -18,6 +18,9 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 nnoremap <Leader>e :e#<CR>
 nnoremap <Leader>p :call flake8#Flake8()
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 autocmd BufWritePre * %s/\s\+$//e
 
 " Plugins will be downloaded under the specified directory.
