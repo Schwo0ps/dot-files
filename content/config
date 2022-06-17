@@ -8,7 +8,7 @@ Host dev-canopy
     HostName 10.128.153.191
     User flippy
     ForwardAgent yes
-Host wc
+Host wc-42
 #    HostName compute.fryer1.chicago.wcastle.internal.misorobotics.com
     HostName 10.128.86.40
     User flippy
@@ -51,6 +51,10 @@ Host caliburger-promenade
     HostName 10.129.0.130
     User flippy
     ForwardAgent yes
+Host wc-26
+    HostName 10.129.0.178
+    User flippy
+    ForwardAgent yes
 
 # Infra
 Host infra-cookright
@@ -75,9 +79,8 @@ Host ft-myers
 
 # DMZ
 Host beast
-    HostName 4.71.137.34
+    HostName 10.191.12.45
     ForwardAgent yes
-    Port 2345
 Host cookright
     HostName 4.71.137.34
     ForwardAgent yes
@@ -86,9 +89,12 @@ Host cookright
 
 # PVE
 Host pve-video
-    HostName 10.191.4.26
-Host vpn
-    HostName 10.191.4.18
+    HostName 10.191.3.49
+Host dash
+    HostName 10.191.3.47
+Host noc
+    HostName 10.191.3.48
+    ForwardAgent yes
 
 # GCP
 Host replication
@@ -109,13 +115,8 @@ Host brentwood-cr
 
 # Other
 Host nikita-desktop
-  HostName 10.191.0.196
+  HostName 10.191.3.56
 	User nikita
-  ForwardAgent yes
-Host noc-desktop
-	HostName 10.191.0.17
-Host festo
-  HostName 10.191.0.17
   ForwardAgent yes
 
 # Proxmox
