@@ -55,6 +55,10 @@ Host wc-26
     HostName 10.129.0.178
     User flippy
     ForwardAgent yes
+Host zaxby
+    HostName 10.129.0.194
+    User flippy
+    ForwardAgent yes
 
 # Infra
 Host infra-cookright
