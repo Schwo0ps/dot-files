@@ -2,6 +2,21 @@
 
 DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/content"
 
+val=
+read_val() {
+  read -p "$1" val
+  val=${val::1}
+  [[ ${val,,} == "y" ]]
+  return $?
+}
+
+if read_val "Install dependencies? "; then
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  sudo snap install universal-ctags
+  mkdir -p ~/bin ~/.config/nvim
+fi
+
 # Set up symlink.
 # First arg is desired location.
 # Second arg is file to link to.
