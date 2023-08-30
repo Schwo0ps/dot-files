@@ -6,6 +6,8 @@ set tabstop=2
 set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
+" Show line numbers
+set number
 
 set grepprg=ack
 
@@ -16,7 +18,7 @@ nnoremap <leader>d :NERDTreeClose<CR>
 nnoremap <leader>l Jxi<CR><Esc>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 nnoremap <Leader>e :e#<CR>
-nnoremap <Leader>p :call flake8#Flake8()
+nnoremap <Leader>p :call flake8#Flake8()<CR>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
@@ -29,9 +31,11 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'nvie/vim-flake8'
+Plug 'psf/black'
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
-autocmd BufWritePre *.py call flake8#Flake8()
+
+autocmd BufWritePre *.py execute 'Black' | call flake8#Flake8()
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
