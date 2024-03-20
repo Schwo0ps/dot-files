@@ -95,6 +95,10 @@ autocmd FileType c,cpp,objc ClangFormatAutoEnable
 "endif
 "let g:deoplete#enable_at_startup = 1
 
+" Codeium autocomplete (take 3)
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+set statusline+=%3{codeium#GetStatusString()}
+
 let g:kite_supported_languages = ['python', 'javascript']
 
 
