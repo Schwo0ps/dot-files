@@ -1,4 +1,7 @@
 # Roar
+Host hpc-caltech
+    HostName login.hpc.caltech.edu
+    User nkosolob
 Host dev-backshelf
 #    HostName compute.fryer1.dev.internal.misorobotics.com
     HostName 10.191.10.53

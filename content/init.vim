@@ -102,6 +102,11 @@ set statusline+=%3{codeium#GetStatusString()}
 let g:kite_supported_languages = ['python', 'javascript']
 
 
+" Install Codeium (J Ma!)
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+" TODO: Remap keys
+
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 

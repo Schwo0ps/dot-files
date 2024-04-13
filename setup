@@ -16,6 +16,7 @@ if read_val "Install dependencies? [y/N]"; then
   sudo snap install universal-ctags
   mkdir -p ~/bin ~/.config/nvim
   sudo apt-get install neovim tig
+  python -m pip install flake8 black
 fi
 
 # Set up symlink.
