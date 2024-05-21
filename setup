@@ -14,7 +14,6 @@ if read_val "Install dependencies? [y/N]"; then
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   sudo snap install universal-ctags
-  mkdir -p ~/bin ~/.config/nvim
   sudo apt-get install neovim tig flake8
   python -m pip install flake8 black
 fi
@@ -50,6 +49,7 @@ function helper
   fi
 }
 
+mkdir -p ~/bin ~/.config/nvim
 helper ~/.bash_aliases bash_aliases
 helper ~/bin/cctg cctg
 helper ~/.gitconfig gitconfig
